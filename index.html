@@ -1,28 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/output.css" />
-    <title>Hamburgueria-ON</title>
-  </head>
-  <body>
 
-    <!-- header -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="./css/output.css" />
+  <title>Hamburgueria-ON</title>
+</head>
 
-      <header>
-        <div>
-          <img 
-          src="./assets/hamb-1.png" 
-          alt="Logo" 
-          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+<body>
+  <!-- header -->
+  <header class="w-full h-[320px] bg-zinc-900 bg-home bg-cover bg-center">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+      <img src="./assets/hamb-1.png" alt="Logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
+      <h1 class="text-4xl mt-4 mb-1 font-bold text-white">
+        Osana - Burguer
+      </h1>
+      <span class="text-white font-medium">Samambai Norte - QR 205 </span>
+      <div class="bg-blue-500 px-4 py-1 rounded-full mt-4" id="date-span">
+        <span class="font-medium text-white">Seg á Dom - 18:00 as 23:30</span>
+      </div>
+    </div>    
+  </header>
+
+  <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+    Conheça nosso menu
+  </h2>
+  
+  <!-- Menu - Principal -->
+  <div id="menu">
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 mx-auto max-w-7x1">
+      <div class="flex gap-2">
+        <!-- imagem do produto -->
+        <img 
+        src="./assets/hamb-1.png" 
+        alt="Humburger Smash"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" 
         />
-        <h1 class="text-3xl mt-4 mb-2 font-bold">
-          Dev Burguer
-        </h1>
-        </div>
-      </header>
+        <!-- Descrição do produto -->
+        <div class="flex flex-col gap-px">
+          <p class="font-bold">
+            Hamburguer Smash
+          </p>
+          <p class="text-sm">Pão levinho de fermentação natural de trigo, burguer 160g, queijo prado e maionese da casa, salada completa.</p>
 
-    <!-- fim header -->
-  </body>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 25,90</p>
+            <button 
+            class="bg-blue-500 px-5 rounded add-to-cart-btn"
+            data-name="Hamburguer Smash"
+            data-price="25,90"
+            >
+              <i class="text-lg text-white px-2">Adicionar</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-2">
+        <!-- imagem do produto -->
+        <img 
+        src="./assets/hamb-1.png" 
+        alt="Humburger Smash"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" 
+        />
+        <!-- Descrição do produto -->
+        <div class="flex flex-col gap-px">
+          <p class="font-bold">
+            Hamburguer Smash
+          </p>
+          <p class="text-sm">Pão levinho de fermentação natural de trigo, burguer 160g, queijo prado e maionese da casa, salada completa.</p>
+
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 25,90</p>
+            <button 
+            class="bg-blue-500 px-5 rounded add-to-cart-btn"
+            data-name="Hamburguer Smash"
+            data-price="25,90"
+            >
+              <i class="text-lg text-white px-2">Adicionar</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>  
+</body>
+
 </html>
