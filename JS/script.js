@@ -14,45 +14,108 @@ const addressWarn = document.getElementById('address-warn')
 let cart = []
 
 //Acessando o modal 
-cartBtn.addEventListener("click", function() {
+cartBtn.addEventListener("click", function () {
   cartModal.style.display = "flex"
+  upDateCartModal()
 });
 
 //Fechando o modal
-cartModal.addEventListener('click', function(event) {
-  if(event.target === cartModal){
+cartModal.addEventListener('click', function (event) {
+  if (event.target === cartModal) {
     cartModal.style.display = "none"
   }
 })
 
-closeModalBtn.addEventListener('click', function(event) {
-  if(event.target === closeModalBtn){
+closeModalBtn.addEventListener('click', function (event) {
+  if (event.target === closeModalBtn) {
     cartModal.style.display = "none"
   }
 })
 
-menu.addEventListener('click', function(event) {
+menu.addEventListener('click', function (event) {
   let parentButton = event.target.closest('.add-to-cart-btn')
 
-  if(parentButton){
+  if (parentButton) {
     const name = parentButton.getAttribute('data-name')
-    const price = parseFloat(parentButton.getAttribute('data-price')).toFixed(2)
+    const price = parseFloat(parentButton.getAttribute('data-price'))
 
     addToCart(name, price)
   }
 })
 
 function addToCart(name, price) {
-
   const existItem = cart.find(item => item.name === name)
 
-  if(existItem){
+  if (existItem) {
     existItem.quantity += 1
+  } else {
+    cart.push({
+      name,
+      price,
+      quantity: 1
+    })
   }
 
-  cart.push({
-    name,
-    price,
-    quantity: 1
+  upDateCartModal()
+}
+
+//Atualiza o carrinho
+function upDateCartModal() {
+  cartItemsContainer.innerHTML = ''
+  let total = 0
+
+  cart.forEach(item => {
+    const cartItemElement = document.createElement('div')
+    cartItemElement.classList.add('flex', 'justify-between', 'mb-4', 'flex-col')
+
+    cartItemElement.innerHTML = `
+    <div class="border-2 rounded-md m-2 flex items-center justify-between">
+      <div>
+        <p class="font-medium">${item.name}</p>   
+        <p> qtd: ${item.quantity}</p>   
+        <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>   
+      </div> 
+    
+      <buttoon class="remove-from-cart-btn m-2 bg-red-400 p-1 rounded cursor-pointer" data-name="${item.name}">
+        Remover
+      </buttoon>  
+    </div>
+    `
+
+    total += item.price * item.quantity
+
+    cartItemsContainer.appendChild(cartItemElement)
+
   })
+
+  cartTotal.textContent = total.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  })
+
+  cartCounter.innerHTML = cart.length
+
+}
+
+cartItemsContainer.addEventListener('click', function(event) {
+  if(event.target.classList.contains("remove-from-cart-btn")){
+    const name = event.target.getAttribute("data-name")
+    removeItemCart(name)
+  }
+})
+
+function removeItemCart(name){
+  const index = cart.findIndex(item => item.name === name)
+
+  if (index !== -1) {
+    const item = cart[index]
+
+    if(item.quantity > 1){
+      item.quantity -= 1
+      upDateCartModal()
+      return
+    }
+    cart.splice(index, 1)
+    upDateCartModal()
+  }
 }
