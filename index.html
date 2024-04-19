@@ -1,52 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/output.css">
-    <title>Hamburgueria - Arte - SAMAMBA</title>
-  </head>
-  <body>
-    <!-- HEADER -->
-      <header class="w-full h-[380px] bg-zinc-900 bg-home bg-cover bg-center">
-        <div class="flex flex-col h-full w-full justify-center items-center">
-          <img 
-          src="/assets/hamb-1.png" 
-          alt="Hamburguer artesanal"
-          id="date-logo"
-          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200 border-green-800 border-4"
-          />
-          <h1 class="text-3xl mt-4 mb-2 font-bold text-white">-Hamburguer - Artesanais-</h1>
-          <p id="date-span" class="bg-green-500 px-8 py-4 rounded-full font-bold text-white border-green-800 border-4 hover:scale-110 duration-200">SEG á DOM <span class="text-blue-700">18H00 AS 23H30</span></p>
-        <span class="font-bold text-white px-4 py-1">205 - SAMAMBAIA NORTE</span>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/output.css">
+  <title>Hamburgueria - Arte - SAMAMBA</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="w-full h-[380px] bg-zinc-900 bg-home bg-cover bg-center">
+    <div class="flex flex-col h-full w-full justify-center items-center">
+      <img src="/assets/hamb-1.png" alt="Hamburguer artesanal" id="date-logo"
+        class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200 border-green-800 border-4" />
+      <h1 class="text-3xl mt-4 mb-2 font-bold text-white">-Hamburguer - Artesanais-</h1>
+      <p id="date-span"
+        class="bg-green-500 px-8 py-4 rounded-full font-bold text-white border-green-800 border-4 hover:scale-110 duration-200">
+        SEG á DOM <span class="text-blue-700">18H00 AS 23H30</span></p>
+      <span class="font-bold text-white px-4 py-1">205 - SAMAMBAIA NORTE</span>
+    </div>
+  </header>
+  <!-- FIM HEADER -->
+  <h2 class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6">
+    HAMBURGUERES
+  </h2>
+  <!-- CORPO PRINCIPAL -->
+  <main class="flex justify-center">
+    <div id="menu">
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-2 justify-center items-center ">
+        <!-- PARTE HAMBURGUES -->
+        <div class="flex gap-2">
+          <img src="./assets/hamb-1.png" alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+          <div>
+            <p class="font-bold">SMASH</p>
+            <p class="text-sm">Pão especial, 2x Hamburguer 160g, salada e molho especial, queijos cheddar.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 25.90</p>
+              <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
         </div>
-      </header>
-      <!-- FIM HEADER -->
-      <h2 class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6">
-        Conheça nosso menu
-      </h2>
-      <!-- CORPO PRINCIPAL -->
-      <div id="menu">
-        <main class="grid-cols-1 md:grid-cols-3 ">
-          <div class="flex flex-col items-center">
-            <img 
-            src="./assets/hamb-1.png" 
-            alt="Hamburguer Smash"
-            class="w-28 h-28 rounded-md " 
-            />
-            <h1 class="font-bold">SMASH</h1>
+        <div class="flex gap-2 dorder-2 rounded-sm">
+          <img src="./assets/hamb-2.png" alt="Duplo Bacon"
+            class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+          <div>
+            <p class="font-bold">DUPLO-BACON</p>
+            <p class="text-sm">Pão especial, 2x Hamburguer 160g, bacon, molho especial, queijos cheddar.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 28.90</p>
+              <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
           </div>
-          <div class="flex-col flex items-center">
-            <img 
-            src="/assets/coca-cafe.png" 
-            alt=""
-            class="w-28 h-28 rounded-md " 
-            />
-            <h1 class="font-bold">COCA-CAFÉ</h1>            
+        </div>
+        <div class="flex gap-2 dorder-2 rounded-sm">
+          <img src="./assets/hamb-3.png" alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+          <div>
+            <p class="font-bold">DUPLO-CHEDDAR</p>
+            <p class="text-sm">Pão especial, 2x Hamburguer 160g, duplo molho especial, queijos cheddar.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 23.90</p>
+              <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
           </div>
-        </main>
-      </div>
-      
-      <!-- FIM CORPO PRINCIPAL -->
-  </body>
+        </div>
+        <div class="flex gap-2 dorder-2 rounded-sm">
+          <img src="./assets/hamb-4.png" alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+          <div>
+            <p class="font-bold">ONE-FRANGO</p>
+            <p class="text-sm">Pão especial, Hamburguer de frango 160g, salada especial, pasta de alho.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 19.90</p>
+              <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- FIM PARTE HAMBURGUES -->
+      <h1 class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6">
+        BEBIDAS
+      </h1>
+      <!-- PARTE BEBIDAS -->
+      <section class="flex justify-center ">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 justify-center items-center h-full w-full">
+          <div class="flex gap-2">
+            <img src="./assets/Coca-Cola-Trad-250ml.png" alt="Hamburguer Smash"
+              class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+            <div>
+              <p class="font-bold">FANTA GUARANÁ</p>
+              <p class="text-sm">Refrigerante sabor guaraná 350ml</p>
+
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 7.90</p>
+                <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 dorder-2 rounded-sm">
+            <img src="./assets/guarana-350ml.png" alt="Hamburguer Smash"
+              class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+            <div>
+              <p class="font-bold">FANTA GUARANÁ</p>
+              <p class="text-sm">Refrigerante sabor guaraná 350ml</p>
+
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 7.90</p>
+                <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 dorder-2 rounded-sm">
+            <img src="./assets/coca-cafe.png" alt="Hamburguer Smash"
+              class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+            <div>
+              <p class="font-bold">FANTA GUARANÁ</p>
+              <p class="text-sm">Refrigerante sabor guaraná 350ml</p>
+
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 7.90</p>
+                <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 dorder-2 rounded-sm">
+            <img src="./assets/refri-1.png" alt="Hamburguer Smash"
+              class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+            <div>
+              <p class="font-bold">FANTA GUARANÁ</p>
+              <p class="text-sm">Refrigerante sabor guaraná 350ml</p>
+
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 7.90</p>
+                <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 dorder-2 rounded-sm">
+            <img src="./assets/refri-2.png" alt="Hamburguer Smash"
+              class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+            <div>
+              <p class="font-bold">FANTA GUARANÁ</p>
+              <p class="text-sm">Refrigerante sabor guaraná 350ml</p>
+
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 7.90</p>
+                <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 dorder-2 rounded-sm">
+            <img src="./assets/output.png" alt="Hamburguer Smash"
+              class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+            <div>
+              <p class="font-bold">FANTA GUARANÁ</p>
+              <p class="text-sm">Refrigerante sabor guaraná 350ml</p>
+
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 7.90</p>
+                <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+            <!-- <div class="flex gap-2 dorder-2 rounded-sm">
+          <img src="./assets/fanta-zero.png" alt="Hamburguer Smash"
+            class="w-28 h-28 rounded-md shadow-md hover:scale-110 duration-300" />
+          <div>
+            <p class="font-bold">FANTA GUARANÁ</p>
+            <p class="text-sm">Refrigerante sabor guaraná 350ml</p>
+  
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 7.90</p>
+              <button class="bg-green-900 px-5 rounded add-to-cart-btn">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>          -->
+        </div>
+      </section>
+
+      <!-- FIM PARTE BEBIDAS -->
+
+      <!-- PARTE SOBRE-MESA -->
+
+      <!-- FIM PARTE SOBRE-MESA -->
+  </main>
+  </div>
+
+  <!-- FIM CORPO PRINCIPAL -->
+</body>
+<script src="https://kit.fontawesome.com/96e78d0cf9.js" crossorigin="anonymous"></script>
+
 </html>
