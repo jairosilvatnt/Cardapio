@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "img": "./assets/hamb-1.png",
+    "titulo": "SMASH",
+    "preco": 25.90,
+    "descricao": "Pão especial, maionese temperado, salada-prima, bacon, 2x hamburguere 160g, 1x fatia queijo prato, 2x fatias queijo cheddar"
+  },
+  {
+    "id": 2,
+    "img": "./assets/hamb-2.png",
+    "titulo": "DUPLO-BACON",
+    "preco": 27.90,
+    "descricao": "Pão especial, bacon, 2x hamburguere 160g, molho de queijo cheddar"
+  },
+  {
+    "id": 3,
+    "img": "./assets/hamb-3.png",
+    "titulo": "DUPLO-BACON",
+    "preco": 29.90,
+    "descricao": "Pão especial, maionese de alho, 2x hamburguere 160g, molho de queijo cheddar"
+  },
+  {
+    "id": 4,
+    "img": "./assets/hamb-4.png",
+    "titulo": "FRANGO-ART",
+    "preco": 26.90,
+    "descricao": "Pão especial, salada-prima com cebola, 1x hamburguere de frango 160g, molho de salada"
+  },
+  {
+    "id": 5,
+    "img": "./assets/hamb-5.png",
+    "titulo": "X-SALADA",
+    "preco": 21.90,
+    "descricao": "Pão especial, salada-prima com tomate, 2x hamburguere 160g, queijo prato"
+  },
+  {
+    "id": 6,
+    "img": "./assets/hamb-6.png",
+    "titulo": "BIG-CHEDDAR",
+    "preco": 21.90,
+    "descricao": "Pão especial, salada-prima com tomate, 1x hamburguere 290g, molho de queijo prato"
+  },
+  {
+    "id": 7,
+    "img": "./assets/hamb-7.png",
+    "titulo": "SUPER-BIG",
+    "preco": 28.90,
+    "descricao": "Pão especial, cebola frita, 2x hamburguere 290g, queijo prato"
+  },
+  {
+    "id": 8,
+    "img": "./assets/hamb-8.png",
+    "titulo": "VEGANO",
+    "preco": 21.90,
+    "descricao": "Pão especial, salada-nobre, 1x hamburguere especial-vegano 160g"
+  }
+]
