@@ -5,7 +5,3 @@
 body {
   background-color: #d8d8d8;
 }
-
-.store-name {
-  @apply text-3xl mt-4 mb-2 font-bold text-white;
-}

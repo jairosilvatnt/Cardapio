@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/output.css">
-  <script src="js/script.js"></script>
   <title>Hamburgueria - Arte - SAMAMBA</title>
 </head>
 
@@ -13,11 +12,8 @@
   <!-- HEADER -->
   <header class="w-full h-[380px] bg-zinc-900 bg-home bg-cover bg-center">
     <div class="flex flex-col h-full w-full justify-center items-center">
-      <img 
-      src="/assets/hamb-1.png" 
-      alt="Hamburguer artesanal" 
-      id="date-logo"
-      class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200 border-green-800 border-4" />
+      <img src="/assets/hamb-1.png" alt="Hamburguer artesanal" id="date-logo"
+        class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200 border-green-800 border-4" />
       <h1 class="store-name">
         -Hamburguer - Artesanais-
       </h1>
@@ -30,33 +26,397 @@
   <!-- FIM HEADER -->
   <h2 class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6">
     HAMBURGUERES
-  </h2> 
+  </h2>
 
   <!-- CORPO PRINCIPAL -->
 
-  <div>
-    <main class="grid grid-cols-1">
-      <div class="flex gap-2 ">
-        <img 
-        src="./assets/hamb-1.png" 
-        alt="Hamburguer artesanal" 
-        class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
-        />
-        <div>
-          <p class="font-bold">SMASH</p>
-          <p class="text-sm">Pão levinho, molho especial, salada-prima, queijo cheddar, <strong>2x</strong> hamburgueres artesanal <strong>160g.</strongs></p>
-          <div class="flex items-center gap-2 justify-between mt-3">
-            <p class="font-bold text-lg">R$ 20.00</p>
-            <button 
-            class="bg-green-900 px-5 rounded add-to-cart-btn" 
-            data-name="SMASH" 
-            data-price="20.00"
-            >
-            <i class="fa fa-cart-plus text-lg text-white"></i>
-            </button>
+  <div id="menu">
+    <main class="flex flex-col items-center">
+      
+      <section id="Hamburguer" class="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-7x1 gap-7 px-4 mb-16 w-10/12">
+        <div class="flex gap-2">
+          <img 
+          src="./assets/hamb-2.png" 
+          alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">DUPLO-BACON</p>
+            <p class="text-sm">Pão levinho, molho especial, queijo cheddar, bacon fatiado, 2x  hamburgueres
+              artesanal 160g. >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 23.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="DUPLO-BACON" 
+              data-price="23.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+  
+  
+        <div class="flex gap-2 ">
+          <img 
+          src="./assets/hamb-3.png" 
+          alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">DUPLO-MOLHO</p>
+            <p class="text-sm">Pão levinho, molho especial, queijo cheddar, bacon fatiado, 2x hamburgueres
+              artesanal 160g.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 23.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="DUPLO-BACON" 
+              data-price="23.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="flex gap-2">
+          <img 
+          src="./assets/hamb-1.png" 
+          alt="Hamburguer artesanal"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">SMASH</p>
+            <p class="text-sm">Pão levinho, molho especial, salada-prima, queijo cheddar, 2x  hamburgueres
+              artesanal 160g. >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="29.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="flex gap-2">
+          <img 
+          src="./assets/hamb-2.png" 
+          alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">DUPLO-BACON</p>
+            <p class="text-sm">Pão levinho, molho especial, queijo cheddar, bacon fatiado, 2x  hamburgueres
+              artesanal 160g.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 23.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="DUPLO-BACON" 
+              data-price="23.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="flex gap-2">
+          <img 
+          src="./assets/hamb-3.png" 
+          alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">DUPLO-MOLHO</p>
+            <p class="text-sm">Pão levinho, molho especial, queijo cheddar, bacon fatiado, 2x hamburgueres
+              artesanal 160g.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 23.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="DUPLO-BACON" 
+              data-price="23.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="flex gap-2">
+          <img 
+          src="./assets/hamb-1.png" 
+          alt="Hamburguer artesanal"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">SMASH</p>
+            <p class="text-sm">Pão levinho, molho especial, salada-prima, queijo cheddar, 2x  hamburgueres
+              artesanal 160g. >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="29.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="flex gap-2">
+          <img 
+          src="./assets/hamb-3.png" 
+          alt=""
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">DUPLO-MOLHO</p>
+            <p class="text-sm">Pão levinho, molho especial, queijo cheddar, bacon fatiado, 2x hamburgueres
+              artesanal 160g.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 23.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="DUPLO-BACON" 
+              data-price="23.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+  
+        
+        <div class="flex gap-2">
+          <img 
+          src="./assets/hamb-1.png" 
+          alt="Hamburguer artesanal"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">SMASH</p>
+            <p class="text-sm">Pão levinho, molho especial, salada-prima, queijo cheddar, 2x  hamburgueres
+              artesanal 160g. >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29.90</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="29.90">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TITULO BEBIDAS -->
+      <h2 class="text-2xl md:text-4xl font-bold text-center mt-5 mb-6">
+        BEBIDAS
+      </h2>
+
+      <!-- CART DAS BEBIDAS  -->
+      <section id="bebidas" class="grid grid-cols-1 md:grid-cols-3 mx-auto px-4 gap-14 max-w-7x1 mb-16 w-10/12">
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-2">
+          <img 
+          src="./assets/coca-cafe.png" 
+          alt="refrigerante"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-300" 
+          />
+          <div>
+            <p class="font-bold">MINI ANTARTICA</p>
+            <p class="text-sm">guaraná antartica-200ml >
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.50</p>
+              <button 
+              class="bg-green-900 px-5 rounded add-to-cart-btn" data-name="SMASH" 
+              data-price="4.50">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+      </section>
     </main>
   </div>
 
