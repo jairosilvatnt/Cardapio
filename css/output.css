@@ -769,6 +769,14 @@ video {
   margin-top: 2.25rem;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -900,8 +908,8 @@ video {
   width: 8rem;
 }
 
-.w-\[90\%\] {
-  width: 90%;
+.w-9\/12 {
+  width: 75%;
 }
 
 .w-\[this-is\\\\\] {
@@ -918,10 +926,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-9\/12 {
-  width: 75%;
 }
 
 .min-w-\[90\%\] {
@@ -1462,12 +1466,16 @@ video {
   gap: 0.5rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .gap-7 {
   gap: 1.75rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1902,6 +1910,10 @@ video {
   border-top-width: 1px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -2128,6 +2140,15 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -2767,22 +2788,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:w-\[\] {
-    width: ;
-  }
-
-  .md\:w-\[10\] {
-    width: 10;
-  }
-
-  .md\:w-\[9\/12\] {
-    width: 9/12;
-  }
-
-  .md\:w-\[9\] {
-    width: 9;
-  }
-
   .md\:min-w-\[600px\] {
     min-width: 600px;
   }
