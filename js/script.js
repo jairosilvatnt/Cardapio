@@ -44,6 +44,7 @@ closeModalBtn.addEventListener('click', function() {
 
 // Adicionar produto dentro do Modal
 menu.addEventListener('click', function(event) {
+  event.preventDefault()
   let parentButton = event.target.closest('.add-to-cart-btn')
 
   if(parentButton){
@@ -146,28 +147,132 @@ addressInput.addEventListener('input', function(event) {
 })
 
 
-// Finalizar o pedido 
-checkoutBtn.addEventListener('click', function() {
-  if(cart.length === 0) {
-    return
+// Função para gerar um ID ordenado
+const geraIdOrdenado = (() => {
+  let contadorID = 1 // iniciando o contador
+  return () => {
+    const id = contadorID
+    contadorID ++
+    return id
   }
-  if(addressInput.value === ''){
-    addressWarn.classList.remove('hidden')
-    addressInput.classList.add('border-red-500')
-    return
-  }  
-})
+})()
 
 
 //Verificar o horario disponivel 
 function checkTimeOpen() {
-  const data = new Date()
-  const hora = data.getHours()
-  return hora >= 21 && hora < 23
+  const dataAtual = new Date()
+
+  // Obtendo o ano, mês e dia
+  const ano = dataAtual.getFullYear();
+  const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Adicionando zero à esquerda, se necessário
+  const dia = String(dataAtual.getDate()).padStart(2, '0');
+
+  //Obtendo a hora, minuto e segundo
+  const hora = String(dataAtual.getHours()).padStart(2, '0');
+  const minuto = String(dataAtual.getMinutes()).padStart(2, '0');
+  const segundo = String(dataAtual.getSeconds()).padStart(2, '0');
+
+  // Formatando a data e hora completa
+  const dataCompleta = `${dia}-${mes}-${ano}`;
+  const horaCompleta = `${hora}:${minuto}:${segundo}`;
+  
+  return { data: dataCompleta, hora: horaCompleta }  
 }
 
+// Finalizar o pedido 
+checkoutBtn.addEventListener('click', function() { 
+
+const isOpen = checkTimeOpen1()
+  if(!isOpen){
+    
+    Toastify({
+      text: "Ainda não estamos funcionando",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+    }).showToast()
+
+    return
+  }
+
+  if(cart.length === 0) return
+  if(addressInput.value === ''){
+    addressWarn.classList.remove('hidden')
+    addressInput.classList.add('border-red-500')
+    return
+  } 
+ 
+  let todosOsItens = ''
+  let total = 0
+
+  //Percorre todos os itens do carrinho
+  cart.forEach((item) => {
+    todosOsItens += `
+    Nome: ${item.name}............${item.quantity}x
+    Preço: R$ ${item.price.toFixed(2)} 
+    -----------------------------
+  `
+  total += item.price * item.quantity 
+  })
+
+  // Obtém a data e hora 
+  const { data, hora } = checkTimeOpen()
+
+  // Montando a mensagem para todos os itens e o resumo da compra
+  const mensagem = `
+        COMERCIO DE ALIMENTOS LTDA
+      QUADRA QR 205 SAMAMBAIA NORTE
+  - BRASILIA-DF, FONE (61) 9 9924 - 6966 -
+  ==========================================
+  Data do Pedido: ${data}    - ${hora} -
+  Número da Senha:..................(( ${geraIdOrdenado()} )) 
+  ${todosOsItens}
+  ===========================================
+  RESUMO DA COMPRA:
+  Total de itens:.................... ${cart.length}
+
+  Valor Total: ....................R$ ${total.toFixed(2)}  
+`
+
+const message = encodeURIComponent(mensagem)
+const phone = "61999246966"
+
+window.open(`https://wa.me/${phone}?text=${mensagem} Endereço: ${addressInput.value}`, "_blank")
+
+cart.length = 0
+updataCartModal()
+})
+
+
+//Verificar o horario disponivel 
+function checkTimeOpen1() {
+  const dataAtual = new Date()
+
+  // Obtendo o ano, mês e dia
+  const ano = dataAtual.getFullYear();
+  const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Adicionando zero à esquerda, se necessário
+  const dia = String(dataAtual.getDate()).padStart(2, '0');
+
+  //Obtendo a hora, minuto e segundo
+  const hora = String(dataAtual.getHours()).padStart(2, '0');
+  const minuto = String(dataAtual.getMinutes()).padStart(2, '0');
+  const segundo = String(dataAtual.getSeconds()).padStart(2, '0');
+
+  // Formatando a data e hora completa
+  const dataCompleta = `${dia}-${mes}-${ano}`;
+  const horaCompleta = `${hora}:${minuto}:${segundo}`;
+  
+  return hora >= 18 && hora < 23  
+}
+
+
 // Manipulando classes de horarios 
-const isOpen = checkTimeOpen()
+const isOpen = checkTimeOpen1()
 if (isOpen) {
   dateLogo.classList.remove('border-red-800')
   dateLogo.classList.add('border-green-800')
