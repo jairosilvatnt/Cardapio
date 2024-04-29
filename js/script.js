@@ -240,7 +240,7 @@ const isOpen = checkTimeOpen1()
 `
 
 const message = encodeURIComponent(mensagem)
-const phone = "61999246966"
+const phone = "61999438236"
 
 window.open(`https://wa.me/${phone}?text=${mensagem} Endereço: ${addressInput.value}`, "_blank")
 
@@ -267,7 +267,7 @@ function checkTimeOpen1() {
   const dataCompleta = `${dia}-${mes}-${ano}`;
   const horaCompleta = `${hora}:${minuto}:${segundo}`;
   
-  return hora >= 18 && hora < 23  
+  return hora >= 10 && hora < 23  
 }
 
 
